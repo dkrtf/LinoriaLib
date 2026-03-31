@@ -4004,7 +4004,7 @@ do
 
         local ToggleContainer = Library:Create("Frame", {
             BackgroundTransparency = 1;
-            Size = UDim2.new(1, -4, 0, 13);
+            Size = UDim2.new(1, -4, 0, 15);
             Visible = Toggle.Visible;
             ZIndex = 5;
             Parent = Container;
@@ -4014,6 +4014,7 @@ do
             BackgroundColor3 = Color3.new(0, 0, 0);
             BorderColor3 = Color3.new(0, 0, 0);
             Size = UDim2.new(0, 13, 0, 13);
+            Position = UDim2.new(0, 0, 0.5, -6);
             Visible = Toggle.Visible;
             ZIndex = 5;
             Parent = ToggleContainer;
@@ -4038,7 +4039,8 @@ do
         })
 
         local ToggleLabel = Library:CreateLabel({
-            Size = UDim2.new(1, -19, 0, 11); -- size of toggle box (13) + size offset of previous layout (6)
+            Size = UDim2.new(1, -19, 0, 15);
+            Position = UDim2.new(0, 19, 0, 0);
             Position = UDim2.new(0, 19, 0, 0);
             TextSize = 14;
             Text = Info.Text;
@@ -4058,7 +4060,7 @@ do
 
         local ToggleRegion = Library:Create("Frame", {
             BackgroundTransparency = 1;
-            Size = UDim2.new(0, 170, 1, 0);
+            Size = UDim2.new(1, 13, 1, 0);
             ZIndex = 8;
             Parent = ToggleOuter;
         })
@@ -4197,7 +4199,7 @@ do
         end
 
         Toggle:Display()
-        Blank = Groupbox:AddBlank(Info.BlankSize or 5 + 2, Toggle.Visible)
+        Blank = Groupbox:AddBlank(Info.BlankSize or 7, Toggle.Visible)
         Groupbox:Resize()
 
         Toggle.TextLabel = ToggleLabel
@@ -6588,10 +6590,10 @@ function Library:CreateWindow(...)
     })
 
     local WindowLabel = Library:CreateLabel({
-        Position = UDim2.new(0, 7, 0, 0);
-        Size = UDim2.new(0, 0, 0, 25);
+        Position = UDim2.new(0, 0, 0, 0);
+        Size = UDim2.new(1, 0, 0, 25);
         Text = WindowInfo.Title or "";
-        TextXAlignment = Enum.TextXAlignment.Left;
+        TextXAlignment = Enum.TextXAlignment.Center;
         ZIndex = 1;
         Parent = Inner;
     })
