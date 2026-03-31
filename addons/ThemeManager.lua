@@ -54,10 +54,10 @@ local ThemeManager = {} do
 
 	ThemeManager.Library = nil
 	ThemeManager.BuiltInThemes = {
-		['Tokyo Night']   = { 1, { FontColor = "ffffff", MainColor = "191925", AccentColor = "6956cb", BackgroundColor = "15151e", OutlineColor = "272727" } },
-		['Primordial']   = { 2, { FontColor = "ffffff", MainColor = "181818", AccentColor = "d7a6b0", BackgroundColor = "1f1f1f", OutlineColor = "2a2a2a" } },
-		['Iniuria']   = { 3, { FontColor = "ffffff", MainColor = "1e1d1e", AccentColor = "c41275", BackgroundColor = "1e1d1e", OutlineColor = "33252b" } },
-		['V3rmillion']   = { 4, { FontColor = "ffffff", MainColor = "202020", AccentColor = "cd1818", BackgroundColor = "202020", OutlineColor = "2a2a2a" } },
+		['Tokyo Night']   = { 1, { FontColor = "ffffff", MainColor = "191925", AccentColor = "6956cb", BackgroundColor = "15151e", OutlineColor = "272727", RiskColor = "fb5f5f" } },
+		['Primordial']   = { 2, { FontColor = "ffffff", MainColor = "181818", AccentColor = "d7a6b0", BackgroundColor = "1f1f1f", OutlineColor = "2a2a2a", RiskColor = "e50000" } },
+		['Iniuria']   = { 3, { FontColor = "ffffff", MainColor = "1e1d1e", AccentColor = "c41275", BackgroundColor = "1e1d1e", OutlineColor = "33252b", RiskColor = "e50000" } },
+		['V3rmillion']   = { 4, { FontColor = "ffffff", MainColor = "202020", AccentColor = "cd1818", BackgroundColor = "202020", OutlineColor = "2a2a2a", RiskColor = "e50000" } },
 	}
 
 	function ApplyBackgroundVideo(videoLink)
