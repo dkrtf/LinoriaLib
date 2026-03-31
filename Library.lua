@@ -4359,6 +4359,8 @@ do
             Library.RegistryMap[Fill].Properties.BorderColor3 = Slider.Disabled and "DisabledOutlineColor" or "AccentColorDark"
         end
         
+        local FillTween = nil
+
         function Slider:Display()
             local CustomDisplayText = nil
             if Info.FormatDisplayValue then
@@ -4383,9 +4385,17 @@ do
             end
 
             local X = Library:MapValue(Slider.Value, Slider.Min, Slider.Max, 0, 1)
-            Fill.Size = UDim2.new(X, 0, 1, 0)
 
-            -- I have no idea what this is
+            if FillTween then FillTween:Cancel() end
+            FillTween = TweenService:Create(
+                Fill,
+                TweenInfo.new(0.1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),
+                { Size = UDim2.new(X, 0, 1, 0) }
+            )
+            FillTween:Play()
+            FillTween.Completed:Connect(function()
+                HideBorderRight.Visible = not (X == 1 or X == 0)
+            end)
             HideBorderRight.Visible = not (X == 1 or X == 0)
         end
 
