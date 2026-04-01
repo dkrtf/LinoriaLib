@@ -7940,9 +7940,9 @@ end
                         local mPos = InputService:GetMouseLocation()
                         local X, Y = mPos.X, mPos.Y
                         Cursor.Color = Library.AccentColor
-                        Cursor.PointA = Vector2.new(X, Y)
-                        Cursor.PointB = Vector2.new(X + 16, Y + 6)
-                        Cursor.PointC = Vector2.new(X + 6, Y + 16)
+                        Cursor.PointA = Vector2.new(X - 4, Y)
+                        Cursor.PointB = Vector2.new(X + 12, Y + 10)
+                        Cursor.PointC = Vector2.new(X - 4, Y + 20)
                         Cursor.Visible = Library.ShowCustomCursor
                         CursorOutline.PointA = Cursor.PointA
                         CursorOutline.PointB = Cursor.PointB
